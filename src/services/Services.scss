@@ -1,0 +1,29 @@
+.service{
+    &__item{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        column-gap: 0.7rem;
+        border-radius: 5px;
+        & span {
+            & i{
+                font-size: 2.2rem;
+                background: var(--primary-color);
+                padding: 10px;
+                border-radius: 50px;
+                color: #fff;
+                font-weight: 400;
+            }
+        }
+        & h3{
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        & p{
+            font-size: 0.9rem;
+            margin-top: 5px;
+            color: #222;
+        }
+    }
+}
