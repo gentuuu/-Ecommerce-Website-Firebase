@@ -49,3 +49,44 @@
         color: var(--primary-color);
     }
 }
+
+@media only screen and (max-width: 992px){
+    .hero__content h2{
+        font-size: 2rem;
+    }
+
+    .section{
+        &__title{
+            font-size: 1.7rem;
+        }
+    }
+
+    .counter__img{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .hero__content{
+        & h2{
+            font-size: 1.6rem;
+        }
+        & p{
+            font-size: 0.9rem;
+        }
+    }
+
+    .buy__btn{
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .hero{
+        &__content{
+            padding-top: 0;
+            margin-bottom: 40px;
+        }
+    }
+
+}
