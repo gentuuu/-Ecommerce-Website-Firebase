@@ -1,0 +1,87 @@
+.product{
+    &__details{
+        margin-top: 50px;
+        & h2{
+            font-size: 1.8rem;
+            margin-top: 10px;
+        }
+    }
+    &__rating{
+        & span{
+            & i {
+                color: coral;
+            }
+        }
+    }
+    &__price{
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+}
+
+.tab__wrapper{
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.active__tab{
+    font-weight: 600;
+}
+
+.tab__content{
+    & p{
+        line-height: 30px;
+    }
+}
+
+.review{
+    &__warapper{
+        & ul li p{
+            margin-top: 10px;
+        }
+    }
+    &__form{
+        width: 70%;
+        margin: auto;
+        margin-top: 50px;
+        & h4{
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    }
+    
+}
+
+.form{
+    &__group{
+        margin-bottom: 30px;
+        & input{
+            width: 100%;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            padding: 8px 20px;    
+            &:focus{
+                outline: none;
+            } 
+        }
+        & textarea{
+            width: 100%;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            padding: 8px 20px;    
+            &:focus{
+                outline: none;
+            }
+        }
+        & span{
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            color: coral;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+}

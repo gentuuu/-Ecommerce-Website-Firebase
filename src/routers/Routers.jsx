@@ -15,7 +15,7 @@ const Routers = () => {
           <Route path="/" element={<Navigate to="home"/>} />
           <Route path="Home" element={<Home/>} />
           <Route path="Shop" element={<Shop/>} />
-          <Route path="Shop/id" element={<ProductDetails/>} />
+          <Route path="Shop/:id" element={<ProductDetails/>} />
           <Route path="Cart" element={<Cart/>} />
           <Route path="Checkout" element={<Checkout/>} />
           <Route path="Login" element={<Login/>} />
