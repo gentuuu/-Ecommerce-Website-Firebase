@@ -1,0 +1,15 @@
+.auth__form{
+    background: var(--primary-color);
+    padding: 40px;
+    border-radius: 5px;
+    & input[type="file"]{
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.login__btn{
+    background: #fff !important;
+    color: var(--primary-color);
+    font-weight: 600;
+}
