@@ -7,19 +7,28 @@ import Login from "../pages/Login";
 import ProductDetails from "../pages/ProductDetails";
 import Signup from "../pages/Signup";
 import Checkout from "../pages/Checkout";
+import ProtectedRoute from "./ProtectedRoute";
 
 const Routers = () => {
   return (
 
         <Routes >
           <Route path="/" element={<Navigate to="home"/>} />
-          <Route path="Home" element={<Home/>} />
-          <Route path="Shop" element={<Shop/>} />
-          <Route path="Shop/:id" element={<ProductDetails/>} />
-          <Route path="Cart" element={<Cart/>} />
-          <Route path="Checkout" element={<Checkout/>} />
-          <Route path="Login" element={<Login/>} />
-          <Route path="Signup" element={<Signup/>} />
+          <Route path="home" element={<Home/>} />
+          <Route path="shop" element={<Shop/>} />
+          <Route path="shop/:id" element={<ProductDetails/>} />
+          <Route path="cart" element={<Cart/>} />
+          {/* <Route path="Checkout" element={<Checkout/>} /> */}
+          <Route 
+            path="checkout" 
+            element={
+              <ProtectedRoute>
+                <Checkout/>
+              </ProtectedRoute>
+            }
+          />
+          <Route path="login" element={<Login/>} />
+          <Route path="signup" element={<Signup/>} />
         </Routes>
     
      

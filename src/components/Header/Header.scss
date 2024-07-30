@@ -21,15 +21,33 @@
         display: flex;
         align-items: center;
         column-gap: 1.2rem;
-        & span{
+        & .profile{
+            position: relative;
+            z-index: 9;
             & i{
                 font-style: 1.4rem;
                 color: var(--primary-color);
                 cursor: pointer;
+                border-radius: 50%;
             }
             & img{
                 width: 30px;
                 height: 30px;
+                cursor: pointer;
+            }
+            & .profile__actions{
+                position: absolute;
+                top: 98%;
+                left: 0;
+                width: 150px;
+                z-index: 10;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                background: var(--card-bg-01);
+                line-height: 30px;
+                display: none;
                 cursor: pointer;
             }
         }
@@ -38,6 +56,10 @@
         font-weight: 700 !important;
 
     }
+}
+
+.show__profileActions{
+    display: block !important;
 }
 
 .logo{
