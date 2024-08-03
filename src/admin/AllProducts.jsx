@@ -1,12 +1,19 @@
 import { Container, Row, Col } from "reactstrap"
 import useGetData from "../custom-hooks/useGetData"
 
+import { db } from "../firebase.config"
+import { doc, deleteDoc } from "firebase/firestore"
+
+import { toast } from "react-toastify"
 
 const AllProducts = () => {
 
   const {data: productsData, loading} = useGetData('products')
 
-  console.log(productsData)
+  const deleteProduct = async(id)=>{
+    await deleteDoc(doc(db,'products', id))
+    toast.success('Deleted!')
+  }
 
   return (
     <section>
@@ -33,7 +40,7 @@ const AllProducts = () => {
                       <td>{item.title}</td>
                       <td>{item.category}</td>
                       <td>{item.price}</td>
-                      <td><button className="btn btn-danger">Delete</button></td>
+                      <td><button onClick={()=>{deleteProduct(item.id)}} className="btn btn-danger">Delete</button></td>
                     </tr>
                   ))
                 )}
